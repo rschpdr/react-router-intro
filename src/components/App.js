@@ -5,6 +5,21 @@ import Homepage from "./Homepage";
 import About from "./About";
 import Greetings from "./Greetings";
 
+const students = [
+  { name: "Pedro", city: "Brasília" },
+  { name: "Filipe", city: "Caraguatatuba" },
+  { name: "Arthur", city: "SP" },
+  { name: "Daniel", city: "SP" },
+  { name: "Aruā", city: "SP" },
+  { name: "Carolina", city: "RJ" },
+  { name: "Camila", city: "SP" },
+  { name: "Yordan", city: "Moc" },
+  { name: "Victor", city: "Itupeva" },
+  { name: "Rubem", city: "Toronto" },
+  { name: "Julia", city: "Garopaba" },
+  { name: "Pedro R.", city: "Indaiatuba" },
+];
+
 function App() {
   return (
     <div>
@@ -19,11 +34,16 @@ function App() {
         <Route
           path="/about"
           render={() => {
-            return <About name="Pedro" />;
+            return <About students={students} name="Pedro" />;
           }}
         />
         {/* Rota para demonstrar parametros de rota no React Router */}
-        <Route path="/greetings/:name" component={Greetings} />
+        <Route
+          path="/greetings/:name"
+          render={() => {
+            return <Greetings students={students} />;
+          }}
+        />
       </BrowserRouter>
     </div>
   );

@@ -9,6 +9,14 @@ function About(props) {
       <p>Welcome to the about page, {props.name}</p>
       {/* O target=blank serve para abrir o link em uma nova aba */}
       <Link to="/">Go to homepage</Link>
+
+      <ul>
+        {props.students.map((student, i) => (
+          <li key={i}>
+            <Link to={`/greetings/${student.name}`}>{student.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
