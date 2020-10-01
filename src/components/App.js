@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Homepage from "./Homepage";
 import About from "./About";
+import Greetings from "./Greetings";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
             return <About name="Pedro" />;
           }}
         />
+        {/* Rota para demonstrar parametros de rota no React Router */}
+        <Route path="/greetings/:name" component={Greetings} />
       </BrowserRouter>
     </div>
   );

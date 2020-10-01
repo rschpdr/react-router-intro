@@ -8,9 +8,7 @@ function About(props) {
       <h1>Hello! You're in the about page</h1>
       <p>Welcome to the about page, {props.name}</p>
       {/* O target=blank serve para abrir o link em uma nova aba */}
-      <Link to="/" target="blank">
-        Go to homepage
-      </Link>
+      <Link to="/">Go to homepage</Link>
     </div>
   );
 }
