@@ -9,6 +9,7 @@ function Greetings(props) {
 
   function handleDelete() {
     // Aqui iria a logica para deletar o documento to banco
+    // ...
     // Equivalente ao res.redirect do Express
     history.push("/about");
   }
